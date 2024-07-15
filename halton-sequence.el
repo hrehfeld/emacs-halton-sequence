@@ -17,7 +17,7 @@
 
 ;;; Code:
 
-(defun corput (n base)
+(defun halton-sequence-corput (n base)
   "Generate the nth element of the Van der Corput sequence in a given BASE."
   (let ((q 0.0)
         (bk (/ 1.0 base)))
@@ -31,7 +31,7 @@
   "Generate a list of COUNT numbers in the Halton sequence for a given BASE."
   (let ((sequence ()))
     (dotimes (i count)
-      (setq sequence (append sequence (list (corput i base)))))
+      (setq sequence (append sequence (list (halton-sequence-corput i base)))))
     sequence))
 
 ;; (halton-sequence 10 2)
