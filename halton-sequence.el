@@ -17,6 +17,7 @@
 
 ;;; Code:
 
+;;;###autoload
 (defun halton-sequence-corput (n base)
   "Generate the nth element of the Van der Corput sequence in a given BASE."
   (let ((q 0.0)
@@ -27,6 +28,7 @@
       (setq bk (/ bk base)))
     q))
 
+;;;###autoload
 (defun halton-sequence (count base)
   "Generate a list of COUNT numbers in the Halton sequence for a given BASE."
   (let ((sequence ()))
